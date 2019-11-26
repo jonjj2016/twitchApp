@@ -1,9 +1,18 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 const App = () => {
+  const onAclick = e => {
+    e.preventDefault();
+    alert('Hi');
+  };
   return (
-    <div>
-      <h1> App </h1>{' '}
-    </div>
+    <Router>
+      <div>
+        <a onClick={onAclick} href='/'>
+          ClIC
+        </a>
+      </div>
+    </Router>
   );
 };
 
